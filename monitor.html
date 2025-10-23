@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Status Dashboard</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="monitor.css">
+</head>
+<body>
+  <h1><span class="material-icons">public</span> Website Status Dashboard</h1>
+
+  <div class="controls">
+    <input type="text" id="siteName" placeholder="Site name (e.g. Google)" />
+    <input type="url" id="siteUrl" placeholder="https://example.com" />
+    <button onclick="addSite()">
+      <span class="material-icons">add_circle</span> Add Site
+    </button>
+  </div>
+
+  <div class="grid" id="statusGrid"></div>
+
+  <div class="refresh">
+    <span class="material-icons spinner">autorenew</span>
+    Auto-refresh every 60 seconds (saved locally)
+  </div>
+<audio id="alertSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+<script type="text/javascript" src="monitor.js"></script>
+</body>
+</html>

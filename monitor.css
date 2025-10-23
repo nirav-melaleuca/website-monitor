@@ -1,0 +1,216 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 30px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  width: 180px;
+}
+
+input[type="url"] {
+  width: 280px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.status {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.up {
+  color: #22c55e;
+}
+.down {
+  color: #ef4444;
+}
+.loading {
+  color: #6b7280;
+}
+
+.site-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.url {
+  font-size: 0.9rem;
+  color: #555;
+  word-break: break-all;
+  text-align: center;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 6px;
+}
+
+.action-btn {
+  position: absolute;
+  top: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.remove-btn {
+  right: 10px;
+  color: #ef4444;
+}
+
+.edit-btn {
+  left: 10px;
+  color: #555;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.refresh {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.spinner {
+  font-size: 18px;
+  animation: spin 1s linear infinite;
+}
+
+.edit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.edit-fields input {
+  width: 90%;
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.edit-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.save-btn {
+  background: #22c55e;
+}
+
+.cancel-btn {
+  background: #9ca3af;
+}
+
+.save-btn:hover {
+  background: #16a34a;
+}
+.cancel-btn:hover {
+  background: #6b7280;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
